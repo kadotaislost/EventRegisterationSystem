@@ -1,0 +1,25 @@
+body {
+  background-image: url("assets/ghibli3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 600px;
+  background-color: rgba(173, 173, 173, 0.425);
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+}
+
+.btn-dark:hover {
+  background-color: #282c30;
+}
+
+.error-message {
+  font-size: 0.875rem;
+  margin-top: 5px;
+  color: rgba(255, 43, 43, 0.658);
+}
