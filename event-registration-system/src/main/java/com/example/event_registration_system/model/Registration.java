@@ -31,6 +31,9 @@ public class Registration {
     @NotEmpty(message = "Photo path is required") // Allows spaces but not empty
     private String photoPath;
 
+    private String badgePath; // New field to store the path of the generated badge PDF
+
+
     // Getters and Setters (for Spring Data JPA to access and set values)
     public Long getId() {
         return id;
@@ -71,4 +74,13 @@ public class Registration {
     public void setPhotoPath(String photoPath) {
         this.photoPath = photoPath;
     }
+
+    public String getBadgePath() {
+        return badgePath;
+    }
+
+    public void setBadgePath(String badgePath) {
+        this.badgePath = badgePath;
+    }
+
 }

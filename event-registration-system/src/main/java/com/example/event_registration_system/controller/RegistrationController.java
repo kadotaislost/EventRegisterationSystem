@@ -2,22 +2,25 @@ package com.example.event_registration_system.controller;
 
 import com.example.event_registration_system.model.Registration;
 import com.example.event_registration_system.service.RegistrationService;
-
+import com.itextpdf.text.DocumentException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
+
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+
+
+
 @RestController
 @RequestMapping("/api/registrations")
-@CrossOrigin(origins = "http://127.0.0.1:5500/") // Allow requests from your frontend
+@CrossOrigin(origins = "http://127.0.0.1:5500/")
 public class RegistrationController {
 
     private final RegistrationService registrationService;
@@ -31,7 +34,7 @@ public class RegistrationController {
             @RequestParam("fullName") String fullName,
             @RequestParam("email") String email,
             @RequestParam("phone") String phone,
-            @RequestParam("photo") MultipartFile photo) throws IOException {
+            @RequestParam("photo") MultipartFile photo) throws IOException, DocumentException {
 
         // Save the photo to the local file system
         String photoPath = savePhoto(photo);
@@ -43,35 +46,28 @@ public class RegistrationController {
         registration.setPhone(phone);
         registration.setPhotoPath(photoPath);
 
-        // Save the registration with the photo path
+        // Save the registration with the photo path and generate PDF
         Registration savedRegistration = registrationService.saveRegistration(registration);
 
         return ResponseEntity.ok(savedRegistration);
     }
 
     private String savePhoto(MultipartFile photo) throws IOException {
-        String uploadDirectory = "./uploads"; // Directory where files are saved
+        String uploadDirectory = "uploads"; // Directory to store the uploaded photos
 
-        // Get the original file extension
         String originalFilename = photo.getOriginalFilename();
         String fileExtension = originalFilename.substring(originalFilename.lastIndexOf("."));
 
-        // Generate a unique file name (UUID + file extension)
         String uniqueFileName = UUID.randomUUID().toString().replace("-", "") + fileExtension;
 
-        // Ensure the upload directory exists
         Path path = Paths.get(uploadDirectory, uniqueFileName);
         Files.createDirectories(path.getParent());
 
-        // Save the file with the unique name
         Files.write(path, photo.getBytes());
 
-        // Return just the unique file name (e.g., "uniqueFileName.jpg")
-        return uniqueFileName;
+        // Return the full path including the uploads directory
+        return "./" + uploadDirectory + "/" + uniqueFileName;
     }
-
-
-
     @GetMapping
     public ResponseEntity<List<Registration>> getAllRegistrations() {
         List<Registration> registrations = registrationService.getAllRegistrations();
