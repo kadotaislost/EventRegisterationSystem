@@ -1,7 +1,7 @@
 document
   .getElementById("registrationForm")
-  .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission
+  .addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent default form submission
 
     // Clear previous error messages
     const errorMessages = document.querySelectorAll(".error-message");
@@ -17,22 +17,16 @@ document
 
     let errors = {};
 
-    // Full Name Validation
+    // Validation logic
     if (!fullName) {
       errors.fullName = "*Full Name is required.";
     }
-
-    // Email Validation
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
       errors.email = "*Please enter a valid email address.";
     }
-
-    // Phone Number Validation (Must be exactly 10 digits)
     if (!phone || !/^\d{10}$/.test(phone)) {
       errors.phone = "*Please enter a valid phone number.";
     }
-
-    // Photo Validation (Must be JPG or PNG)
     if (!photo) {
       errors.photo = "*Please upload a photo.";
     } else if (!["image/jpeg", "image/png"].includes(photo.type)) {
@@ -44,10 +38,43 @@ document
       for (const field in errors) {
         document.getElementById(`${field}Error`).innerHTML = errors[field];
       }
-    } else {
-      // If no errors, you can proceed with form submission (e.g., via AJAX or form action)
-      alert("Form is valid! You can proceed with form submission.");
-      // Optionally submit the form here
-      // e.target.submit();  // Uncomment this to actually submit the form
+      return;
+    }
+
+    // If no errors, send data to the backend
+    const formData = new FormData();
+    formData.append("fullName", fullName);
+    formData.append("email", email);
+    formData.append("phone", phone);
+    formData.append("photo", photo);
+
+    try {
+      const response = await fetch("http://localhost:8080/api/registrations", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Response from server:", data);
+
+        // Remove the leading "./" from badgePath
+        const sanitizedBadgePath = data.badgePath.replace(/^\.\//, "");
+
+        // Construct the full URL for the badge
+        const badgeUrl = `http://localhost:8080/${sanitizedBadgePath}`;
+
+        // Redirect to thank you page with badge URL and user name
+        window.location.href = `thankyou.html?badgeUrl=${encodeURIComponent(
+          badgeUrl
+        )}`;
+      } else {
+        const errorText = await response.text();
+        alert("Error submitting form. Please try again.");
+        console.error("Server response error:", errorText);
+      }
+    } catch (error) {
+      alert("Error submitting form. Please try again.");
+      console.error("Error:", error);
     }
   });
