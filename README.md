@@ -38,7 +38,7 @@ These dependencies are defined in the `pom.xml` file, and Maven will automatical
 First, clone the GitHub repository to your local machine:
 
 ```bash
-git clone <repository-link>
+git clone https://github.com/kadotaislost/EventRegisterationSystem.git
 cd <repository-directory>
 ```
 
