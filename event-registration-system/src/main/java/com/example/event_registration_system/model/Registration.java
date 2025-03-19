@@ -2,6 +2,7 @@ package com.example.event_registration_system.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.Date;
 
 @Entity // Marks this class as an entity, meaning it will be mapped to a database table.
 @Table(name = "registrations")  // This tells Spring Boot that this entity is mapped to the "registrations" table.
@@ -33,7 +34,20 @@ public class Registration {
 
     private String badgePath; // New field to store the path of the generated badge PDF
 
+    private String testtt;
 
+    @ManyToOne
+    @JoinColumn(name = "event_id")
+    private Event event;
+
+    // Add getter and setter
+    public Event getEvent() {
+        return event;
+    }
+
+    public void setEvent(Event event) {
+        this.event = event;
+    }
     // Getters and Setters (for Spring Data JPA to access and set values)
     public Long getId() {
         return id;

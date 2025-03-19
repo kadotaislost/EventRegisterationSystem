@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="1742292557758-1" author="Omen">
+        <createTable tableName="registrations">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="full_name" type="VARCHAR(255)"/>
+            <column name="phone" type="VARCHAR(255)"/>
+            <column name="photo_path" type="VARCHAR(255)"/>
+            <column name="badge_path" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1742292557758-2" author="Omen">
+        <addUniqueConstraint constraintName="ukidp1vvtxcas756srmstcngbdb" tableName="registrations" columnNames="phone"/>
+    </changeSet>
+
+    <changeSet id="1742292557758-3" author="Omen">
+        <addUniqueConstraint constraintName="ukkl9n0mqlywhdcxr2hb9f68yss" tableName="registrations" columnNames="email"/>
+    </changeSet>
+
+    <changeSet id="1742292676731-1" author="Omen">
+        <insert tableName="registrations">
+            <column name="id" value="110"/>
+            <column name="email" value="shaili@gmail.com"/>
+            <column name="full_name" value="Shaili Mahrjan"/>
+            <column name="phone" value="9845353155"/>
+            <column name="photo_path" value="./uploads/cf039e79a71c4e80a84a243f49c652bb.png"/>
+            <column name="badge_path" value="./badges/110_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="111"/>
+            <column name="email" value="saurabh@gmail.com"/>
+            <column name="full_name" value="saurabh lama"/>
+            <column name="phone" value="9849936581"/>
+            <column name="photo_path" value="./uploads/04949fbe83d846018c45aa79a66dc323.jpeg"/>
+            <column name="badge_path" value="./badges/111_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="112"/>
+            <column name="email" value="b@gmail.com"/>
+            <column name="full_name" value="blank"/>
+            <column name="phone" value="9867246726"/>
+            <column name="photo_path" value="./uploads/8b796a46affa4e49bc936f333622a6b3.jfif"/>
+            <column name="badge_path" value="./badges/112_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="113"/>
+            <column name="email" value="pandu@gmail.com"/>
+            <column name="full_name" value="pandu"/>
+            <column name="phone" value="2142324324"/>
+            <column name="photo_path" value="./uploads/d3ac25392b5f4388b7b2f201f0e0ef31.jpeg"/>
+            <column name="badge_path" value="./badges/113_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="114"/>
+            <column name="email" value="aayush@gmail.com"/>
+            <column name="full_name" value="aayush"/>
+            <column name="phone" value="3243253565"/>
+            <column name="photo_path" value="./uploads/923fc91d63714f80bfb32878b7858832.jpeg"/>
+            <column name="badge_path" value="./badges/114_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="102"/>
+            <column name="email" value="sachinlama2003@gmail.com"/>
+            <column name="full_name" value="sachin lama"/>
+            <column name="phone" value="9845353156"/>
+            <column name="photo_path" value="./uploads/81b95d6687984d879211ae38048d59a7.jpeg"/>
+            <column name="badge_path" value="./badges/102_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="103"/>
+            <column name="email" value="herodai123@gmail.com"/>
+            <column name="full_name" value="herodai123"/>
+            <column name="phone" value="3333555661"/>
+            <column name="photo_path" value="./uploads/97b716a5c0db4296bfa2f6bf11c40e8b.png"/>
+            <column name="badge_path" value="./badges/103_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="104"/>
+            <column name="email" value="lamadai123@gmail.com"/>
+            <column name="full_name" value="lamadai"/>
+            <column name="phone" value="2357847331"/>
+            <column name="photo_path" value="./uploads/cf79ed1ffc5b415a888a981dde2d5420.jfif"/>
+            <column name="badge_path" value="./badges/104_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="108"/>
+            <column name="email" value="kadota@gmail.com"/>
+            <column name="full_name" value="kadotaislost"/>
+            <column name="phone" value="9845353159"/>
+            <column name="photo_path" value="./uploads/b32ca7bc9ff44842a62a5a77ed79fb55.jpg"/>
+            <column name="badge_path" value="./badges/108_badge.pdf"/>
+        </insert>
+        <insert tableName="registrations">
+            <column name="id" value="109"/>
+            <column name="email" value="lija324@gmail.com"/>
+            <column name="full_name" value="Lija Maharjan"/>
+            <column name="phone" value="9860863781"/>
+            <column name="photo_path" value="./uploads/cfcc1b72314a4f2b81605b4d2532aa1a.jpg"/>
+            <column name="badge_path" value="./badges/109_badge.pdf"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="1742292353576731-2" author="Omen">
+        <addColumn tableName="registrations">
+            <column name="testtt" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="new-event-table" author="Omen">
+        <createTable tableName="events">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(1000)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="start_date" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_date" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="location" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="add-event-relation-to-registration" author="Omen">
+        <addColumn tableName="registrations">
+            <column name="event_id" type="BIGINT"/>
+        </addColumn>
+        <addForeignKeyConstraint baseTableName="registrations"
+                                 baseColumnNames="event_id"
+                                 constraintName="fk_registration_event"
+                                 referencedTableName="events"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>
