@@ -1,0 +1,108 @@
+2025-03-19 14:05:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.event_registration_system.EventRegistrationSystemApplicationTests], using SpringBootContextLoader
+2025-03-19 14:05:29 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.event_registration_system.EventRegistrationSystemApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-03-19 14:05:29 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.event_registration_system.EventRegistrationSystemApplicationTests]: EventRegistrationSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-19 14:05:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.event_registration_system.EventRegistrationSystemApplication for test class com.example.event_registration_system.EventRegistrationSystemApplicationTests
+2025-03-19 14:05:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2025-03-19 14:05:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32ccc5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@8741cb, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@44f2a5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@15cf707, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@130520d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@177d0f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fd068, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@95e367, org.springframework.test.context.event.EventPublishingTestExecutionListener@1266842, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3793c7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@b3b079, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@11aed93, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1d6fd0a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b9e6dc, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@56afaa]
+2025-03-19 14:05:29 [main] INFO  c.e.e.EventRegistrationSystemApplicationTests - Starting EventRegistrationSystemApplicationTests using Java 1.8.0_44 on LAPTOP-6LUT3J7B with PID 5840 (started by Omen in D:\downloads\event-registration-system\event-registration-system)
+2025-03-19 14:05:29 [main] DEBUG c.e.e.EventRegistrationSystemApplicationTests - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-03-19 14:05:29 [main] INFO  c.e.e.EventRegistrationSystemApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-19 14:05:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-03-19 14:05:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-19 14:05:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2025-03-19 14:05:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-19 14:05:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-19 14:05:31 [main] INFO  liquibase.database - Set default schema name to public
+2025-03-19 14:05:31 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2025-03-19 14:05:32 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-03-19 14:05:32 [main] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-03-19 14:05:32 [main] INFO  liquibase.util - UPDATE SUMMARY
+2025-03-19 14:05:32 [main] INFO  liquibase.util - Run:                          0
+2025-03-19 14:05:32 [main] INFO  liquibase.util - Previously run:               7
+2025-03-19 14:05:32 [main] INFO  liquibase.util - Filtered out:                 0
+2025-03-19 14:05:32 [main] INFO  liquibase.util - -------------------------------
+2025-03-19 14:05:32 [main] INFO  liquibase.util - Total change sets:            7
+
+2025-03-19 14:05:32 [main] INFO  liquibase.util - Update summary generated
+2025-03-19 14:05:32 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-03-19 14:05:32 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2025-03-19 14:05:32 [main] INFO  liquibase.command - Command execution complete
+2025-03-19 14:05:32 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-19 14:05:32 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-19 14:05:32 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-19 14:05:32 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-03-19 14:05:33 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-19 14:05:33 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-19 14:05:34 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-19 14:05:34 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-03-19 14:05:34 [main] INFO  c.e.e.EventRegistrationSystemApplicationTests - Started EventRegistrationSystemApplicationTests in 5.16 seconds (JVM running for 6.121)
+2025-03-19 14:05:34 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-19 14:05:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-19 14:05:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-19 14:08:43 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-03-19 14:08:43 [restartedMain] INFO  c.e.e.EventRegistrationSystemApplication - Starting EventRegistrationSystemApplication using Java 1.8.0_44 on LAPTOP-6LUT3J7B with PID 5276 (D:\downloads\event-registration-system\event-registration-system\target\classes started by Omen in D:\downloads\event-registration-system\event-registration-system)
+2025-03-19 14:08:43 [restartedMain] DEBUG c.e.e.EventRegistrationSystemApplication - Running with Spring Boot v2.7.10, Spring v5.3.26
+2025-03-19 14:08:43 [restartedMain] INFO  c.e.e.EventRegistrationSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-19 14:08:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-19 14:08:43 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-19 14:08:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-19 14:08:44 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2025-03-19 14:08:44 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-19 14:08:44 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-19 14:08:44 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-19 14:08:44 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2025-03-19 14:08:45 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-19 14:08:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1249 ms
+2025-03-19 14:08:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-19 14:08:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-19 14:08:45 [restartedMain] INFO  liquibase.database - Set default schema name to public
+2025-03-19 14:08:45 [restartedMain] INFO  liquibase.lockservice - Successfully acquired change log lock
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.changelog - Reading from public.databasechangelog
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - UPDATE SUMMARY
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - Run:                          0
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - Previously run:               7
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - Filtered out:                 0
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - -------------------------------
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - Total change sets:            7
+
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.util - Update summary generated
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.lockservice - Successfully released change log lock
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.lockservice - Successfully released change log lock
+2025-03-19 14:08:46 [restartedMain] INFO  liquibase.command - Command execution complete
+2025-03-19 14:08:46 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-19 14:08:46 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-19 14:08:46 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-19 14:08:46 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2025-03-19 14:08:46 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-19 14:08:46 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-19 14:08:47 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-19 14:08:47 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-03-19 14:08:47 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-19 14:08:47 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-19 14:08:47 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-19 14:08:47 [restartedMain] INFO  c.e.e.EventRegistrationSystemApplication - Started EventRegistrationSystemApplication in 3.892 seconds (JVM running for 5.037)
+2025-03-19 14:09:06 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-19 14:09:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-19 14:09:06 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-19 14:09:21 [http-nio-8080-exec-6] INFO  c.e.e.c.RegistrationController - Received registration request for user: test
+2025-03-19 14:09:21 [http-nio-8080-exec-6] DEBUG c.e.e.c.RegistrationController - Photo saved at path: ./uploads/c9e8045ee75d4987bcc5b7ed01d3a9b3.jfif
+2025-03-19 14:09:21 [http-nio-8080-exec-6] INFO  c.e.e.c.RegistrationController - Registration completed successfully for: test
+2025-03-19 14:10:15 [http-nio-8080-exec-5] INFO  c.e.e.c.RegistrationController - Received registration request for user: another test
+2025-03-19 14:10:15 [http-nio-8080-exec-5] DEBUG c.e.e.c.RegistrationController - Photo saved at path: ./uploads/d4f4f3df28a141339c768659d62fa801.jpeg
+2025-03-19 14:10:15 [http-nio-8080-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-03-19 14:10:15 [http-nio-8080-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "ukkl9n0mqlywhdcxr2hb9f68yss"
+  Detail: Key (email)=(testttt@gmail.com) already exists.
+2025-03-19 14:10:15 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [ukkl9n0mqlywhdcxr2hb9f68yss]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2025-03-19 14:10:20 [http-nio-8080-exec-7] INFO  c.e.e.c.RegistrationController - Received registration request for user: another test
+2025-03-19 14:10:20 [http-nio-8080-exec-7] DEBUG c.e.e.c.RegistrationController - Photo saved at path: ./uploads/1d55048a0e5240b0917ab69cafaabbaf.jpeg
+2025-03-19 14:10:20 [http-nio-8080-exec-7] INFO  c.e.e.c.RegistrationController - Registration completed successfully for: another test
+2025-03-19 14:10:54 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-03-19 14:10:55 [Thread-6] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-03-19 14:10:55 [Thread-6] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-19 14:10:55 [Thread-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-03-19 14:10:55 [Thread-6] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-03-19 14:10:55 [Thread-6] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2025-03-19 14:10:55 [Thread-6] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-19 14:10:55 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-19 14:10:55 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

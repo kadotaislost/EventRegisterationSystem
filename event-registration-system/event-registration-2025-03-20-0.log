@@ -1,0 +1,3 @@
+2025-03-20 12:23:26 [http-nio-8080-exec-1] INFO  c.e.e.c.RegistrationController - Received registration request for user: sachinnn
+2025-03-20 12:23:26 [http-nio-8080-exec-1] DEBUG c.e.e.c.RegistrationController - Photo saved at path: ./uploads/26e372b77ef74ca4992cc473c6deccc4.jpeg
+2025-03-20 12:23:26 [http-nio-8080-exec-1] INFO  c.e.e.c.RegistrationController - Registration completed successfully for: sachinnn

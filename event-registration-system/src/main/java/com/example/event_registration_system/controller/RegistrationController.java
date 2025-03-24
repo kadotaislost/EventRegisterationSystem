@@ -3,11 +3,15 @@ package com.example.event_registration_system.controller;
 import com.example.event_registration_system.model.Registration;
 import com.example.event_registration_system.service.RegistrationService;
 import com.itextpdf.text.DocumentException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +25,7 @@ import java.nio.file.Files;
 @RestController
 @RequestMapping("/api/registrations")
 @CrossOrigin(origins = "http://127.0.0.1:5500/")
+@Slf4j
 public class RegistrationController {
 
     private final RegistrationService registrationService;
@@ -36,8 +41,10 @@ public class RegistrationController {
             @RequestParam("phone") String phone,
             @RequestParam("photo") MultipartFile photo) throws IOException, DocumentException {
 
+        log.info("Received registration request for user: {}", fullName);
         // Save the photo to the local file system
         String photoPath = savePhoto(photo);
+        log.debug("Photo saved at path: {}", photoPath);
 
         // Create a Registration object
         Registration registration = new Registration();
@@ -48,7 +55,7 @@ public class RegistrationController {
 
         // Save the registration with the photo path and generate PDF
         Registration savedRegistration = registrationService.saveRegistration(registration);
-
+        log.info("Registration completed successfully for: {}", fullName);
         return ResponseEntity.ok(savedRegistration);
     }
 
